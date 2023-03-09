@@ -44,19 +44,7 @@
             }
             return matrix;
         }
-
-        static int[,] GetResultMatrixMultiplication(int[,] firstMatrix, int[,] secondMatrix)
-        {
-            int[,] arrayResult = new int[firstMatrix.GetLength(0), firstMatrix.GetLength(1)];
-            for (int i = 0; i < arrayResult.GetLength(0); i++)
-            {
-                for (int j = 0; j < arrayResult.GetLength(1); j++)
-                {
-                    arrayResult[i, j] = firstMatrix[i, j] * secondMatrix[i, j];
-                }
-            }
-            return arrayResult;
-        }
+                
         //        Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
         //        Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
         //        массив размером 2 x 2 x 2
@@ -64,7 +52,7 @@
         //        45(1,0,0) 53(1,0,1)
         static void Main(string[] args)
         {
-            int[,,] matrix = GetRandomMatrix(3, 3, 3, 10, 98);
+            int[,,] matrix = GetRandomMatrix(2, 2, 2, 10, 98);
             PrintMatrix(matrix);
         }
     }
