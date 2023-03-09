@@ -11,8 +11,7 @@
                 bool checkUserMassedge = int.TryParse(Console.ReadLine(), out convertNumber);
                 if (checkUserMassedge) return convertNumber;
                 else Console.WriteLine("Ошибка! Попробуйте еще раз.");
-            }
-            Console.WriteLine();
+            }            
         }
 
         static void PrintMatrix(int[,] matrix)
@@ -76,8 +75,7 @@
             int maxValue = GetConvertUserMassadge("Введите максимальное значение интервала случайных чисел: ");
             int[,] myMatrix = GetRandomMatrix(row, colums, minValue, maxValue);
             PrintMatrix(myMatrix);
-            ArrangeMatrixInAscendingOrder(myMatrix);
-            //Console.WriteLine();
+            ArrangeMatrixInAscendingOrder(myMatrix);            
             PrintMatrix(myMatrix);
 
         }
