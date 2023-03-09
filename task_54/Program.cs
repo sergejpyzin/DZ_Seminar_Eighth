@@ -68,11 +68,11 @@
 //      2 4 4 8
         static void Main(string[] args)
         {
-            //int row = GetConvertUserMassadge("Введите количество строк: ");
-            //int colums = GetConvertUserMassadge("Введите количество столбцов: ");
-            //int minValue = GetConvertUserMassadge("Введите минимальное значение интервала случайных чисел: ");
-            //int maxValue = GetConvertUserMassadge("Введите максимальное значение интервала случайных чисел: ");
-            int [,] myMatrix = GetRandomMatrix(row, colums, minValue, maxValue);
+            int row = GetConvertUserMassadge("Введите количество строк: ");
+            int colums = GetConvertUserMassadge("Введите количество столбцов: ");
+            int minValue = GetConvertUserMassadge("Введите минимальное значение интервала случайных чисел: ");
+            int maxValue = GetConvertUserMassadge("Введите максимальное значение интервала случайных чисел: ");
+            int[,] myMatrix = GetRandomMatrix(row, colums, minValue, maxValue);
             PrintMatrix(myMatrix);
             ArrangeMatrixInAscendingOrder(myMatrix);
             Console.WriteLine();
