@@ -12,6 +12,7 @@
                 if (checkUserMassedge) return convertNumber;
                 else Console.WriteLine("Ошибка! Попробуйте еще раз.");
             }
+            Console.WriteLine();
         }
 
         static void PrintMatrix(int[,] matrix)
@@ -24,6 +25,7 @@
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine();
         }
         static int[,] GetRandomMatrix(int row, int colums, int leftBoarder, int rightBoarder)
         {
@@ -75,7 +77,7 @@
             int[,] myMatrix = GetRandomMatrix(row, colums, minValue, maxValue);
             PrintMatrix(myMatrix);
             ArrangeMatrixInAscendingOrder(myMatrix);
-            Console.WriteLine();
+            //Console.WriteLine();
             PrintMatrix(myMatrix);
 
         }
