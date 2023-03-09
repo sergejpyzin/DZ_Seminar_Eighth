@@ -25,7 +25,7 @@
             }
             Console.WriteLine();
         }
-        static int[,] GetRandomMatrix(int side)
+        static int[,] GetSpiralMatrix(int side)
         {
             int[,] matrix = new int[side, side];
             int row = 0;
@@ -56,7 +56,7 @@
         static void Main(string[] args)
         {
             int sideMatrix = GetConvertUserMassadge("Введите сторону квадратной матрицы: ");
-            int[,] myMatrix = GetRandomMatrix(sideMatrix);
+            int[,] myMatrix = GetSpiralMatrix(sideMatrix);
 
             PrintMatrix(myMatrix);
         }
