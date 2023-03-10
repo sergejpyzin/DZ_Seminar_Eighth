@@ -38,13 +38,42 @@
                 {
                     for (int k = 0; k< matrix.GetLength(2); k++)
                     {
-                        matrix[i, j, k] = Random.Shared.Next(leftBoarder, rightBoarder + 1);
+                        matrix[i, j, k] = GetUniqueValue(matrix, leftBoarder, rightBoarder, i, j, k);
                     }
                 }
             }
             return matrix;
         }
-                
+
+        static int GetUniqueValue(int[,,] matrix, int leftBoarder, int rightBoarder, int rowNumber, 
+            int columsNumber, int heightNumber)
+        {
+            int value = 0;
+            bool exist = true;
+            while (exist)
+            {
+                bool stop = false;
+                value = Random.Shared.Next(leftBoarder, rightBoarder + 1);
+                for (int i = 0; i < matrix.GetLength(0); i++)
+                {
+                    if (stop) break;
+                    for (int j = 0; j < matrix.GetLength(1); j++)
+                    {
+                        if (stop) break; 
+                        for (int k = 0; k < matrix.GetLength(2); k++)
+                        {
+                            if (matrix[i, j, k] == value)
+                            {   stop = true;
+                                break;
+                            }
+                            if (i == rowNumber && j == columsNumber && k == heightNumber) exist = false;
+                        }
+                    }
+                }
+            }
+            return value;
+        }
+
         //        Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
         //        Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
         //        массив размером 2 x 2 x 2
